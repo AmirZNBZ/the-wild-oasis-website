@@ -1,3 +1,5 @@
-export default function Loading(){
-  return <p>LOADING DATA ....</p>
+import Spinner from "./_components/Spinner";
+
+export default function Loading() {
+  return <Spinner />;
 }
