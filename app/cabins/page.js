@@ -1,7 +1,6 @@
 import { Suspense } from "react";
-import CabinList from "../_components/cabinList";
-import { getCabins } from "../_lib/data-service";
 import Loading from "../loading";
+import CabinList from "../_components/CabinList";
 
 export const metadata = {
   title: "Cabins",
