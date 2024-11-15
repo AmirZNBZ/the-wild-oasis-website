@@ -6,6 +6,8 @@ export const metadata = {
   title: "Cabins",
 };
 
+export const revalidate = 3600; // This revalidation working in route level
+
 export default async function Page() {
   return (
     <div>
