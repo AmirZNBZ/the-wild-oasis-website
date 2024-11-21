@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import Loading from "../loading";
 import CabinList from "../_components/CabinList";
 import Filter from "../_components/Filter";
+import ReservationReminder from "../_components/ReservationReminder";
 
 export const metadata = {
   title: "Cabins",
@@ -10,8 +11,6 @@ export const metadata = {
 export const revalidate = 3600; // This revalidation working in route level AND when we use the searchParams the revalidation not working because this page now dynamically render not static
 
 export default async function Page({ searchParams }) {
-  console.log("@@@@@", searchParams);
-
   const filter = searchParams?.capacity ?? "all";
 
   return (
@@ -29,6 +28,7 @@ export default async function Page({ searchParams }) {
 
       <Suspense fallback={<Loading />} key={filter}>
         <CabinList filter={filter} />
+        <ReservationReminder />
       </Suspense>
     </div>
   );
