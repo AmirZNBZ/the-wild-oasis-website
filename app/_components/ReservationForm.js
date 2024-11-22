@@ -1,6 +1,6 @@
 "use client";
 
-import { useReservation } from "./reservationContext";
+import { useReservation } from "./ReservationContext";
 
 function ReservationForm({ cabin }) {
   const { range } = useReservation();
